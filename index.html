@@ -7,40 +7,68 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
-<body>
-    
-  
-<p id="datos-locales">Bienvenido, esta es tu IP: <span id="ipCliente">-</span>, desde el país: <span id="country_name">-</span>, continente: <span id="continent_name">-</span>, hora local: <span id="current_time">-</span></p>
+<body class="bg-light">
 
+<div class="container mt-5">
+    <h2 class="mb-4">Bienvenido a PEOPLE CLUB</h2>
 
-    <form id="dataForm">
-        <label for="name">Nombre:</label>
-        <input type="text" id="name" name="name" required>
+    <p id="datos-locales" class="lead">Bienvenido, esta es tu IP: <span id="ipCliente" class="font-weight-bold">-</span>, desde el país: <span id="country_name" class="font-weight-bold">-</span>, continente: <span id="continent_name" class="font-weight-bold">-</span>, hora local: <span id="current_time" class="font-weight-bold">-</span></p>
+    <div class="custom-control custom-switch mb-3">
+        <input type="checkbox" class="custom-control-input" id="alternarFormulario" onchange="alternarFormulario()">
+        <label class="custom-control-label" for="alternarFormulario">Activar/Desactivar Añadir Mis Datos :U</label>
+    </div>
+    <form id="dataForm" style="display: none;">
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="name">Nombre:</label>
+                <input type="text" class="form-control" id="name" name="name" required>
+            </div>
 
-        <label for="nickname">Nickname:</label>
-        <input type="text" id="nickname" name="nickname" required>
+            <div class="form-group col-md-6">
+                <label for="nickname">Nickname:</label>
+                <input type="text" class="form-control" id="nickname" name="nickname" required>
+            </div>
+        </div>
 
-        <label for="correoelectronico">Correo Electrónico:</label>
-        <input type="email" id="correoelectronico" name="correoelectronico" required>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="correoelectronico">Correo Electrónico:</label>
+                <input type="email" class="form-control" id="correoelectronico" name="correoelectronico" required>
+            </div>
 
-        <label for="FechaNacimiento">Fecha de Nacimiento:</label>
-        <input type="date" id="FechaNacimiento" name="FechaNacimiento" required>
+            <div class="form-group col-md-6">
+                <label for="FechaNacimiento">Fecha de Nacimiento:</label>
+                <input type="date" class="form-control" id="FechaNacimiento" name="FechaNacimiento" required>
+            </div>
+        </div>
 
-        <label for="age">Edad:</label>
-        <input type="number" id="age" name="age" required>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="age">Edad:</label>
+                <input type="number" class="form-control" id="age" name="age" required>
+            </div>
+        </div>
 
-        <button type="button" onclick="#">Enviar</button>
+        <button type="button" class="btn btn-primary" onclick="#">Enviar</button>
     </form>
 
-     <div id="estadisticas">
-        Estadísticas: Total de usuarios: <span id="total_users">-</span>, Sesiones activas: <span id="active_sessions">-</span>, Solicitudes totales: <span id="total_requests">-</span>
+    <div id="estadisticas" class="mt-4">
+        <p class="lead">Estadísticas: Total de usuarios: <span id="total_users" class="font-weight-bold">-</span>, Sesiones activas: <span id="active_sessions" class="font-weight-bold">-</span>, Solicitudes totales: <span id="total_requests" class="font-weight-bold">-</span></p>
     </div>
+</div>
 
-    <!-- Bootstrap JS y jQuery -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<!-- Bootstrap JS y jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-<script src="js/main.js"> </script>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script src="js/main.js"></script>
+<script>
+    function alternarFormulario() {
+        var formulario = document.getElementById('dataForm');
+        formulario.style.display = document.getElementById('alternarFormulario').checked ? 'block' : 'none';
+    }
+</script>
 </body>
 </html>
