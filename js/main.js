@@ -1,5 +1,6 @@
 let country_name = document.getElementById('country_name');
 
+
 const solicitudAPI = () => {
     // Realizar solicitud al servidor para obtener el país
     axios.get('https://itp-bdd-jilr-01.000webhostapp.com/php-geoip-api/get-country.php')
@@ -13,12 +14,6 @@ const solicitudAPI = () => {
             console.log(error);
         });
 };
-
-// Llamar a la función al cargar la página
-window.addEventListener('load', solicitudAPI);
-
-
-
 };
 
 // llama al evento load cada vez que se actulaiza la pagina
