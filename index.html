@@ -3,41 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Tabla de Datos</title>
+    <title>País de Origen</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
     
-    <!-- ... (código previo) ... -->
-<div class="container mt-5">
-    <h2 class="mb-4">Tabla de Datos</h2>
-    <table class="table">
-        <thead>
-            <tr>
-                <th scope="col">IP</th>
-                <th scope="col">País</th>
-                <th scope="col">Continente</th>
-                <th scope="col">Zona Horaria</th>
-            </tr>            
-        </thead>
-        
-        <tbody id="tabla-datos-body">
-            <tr>
-                <td id="ipCliente">-</td>
-                <td id="country_name">-</td>
-                <td id="continent_name">-</td>
-                <td id="current_time">-</td>
-            </tr>
-         </tbody>
-    </table>
-</div>
+    <div class="container mt-5">
+        <h2 class="mb-4">País de Origen</h2>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">País</th>
+                </tr>            
+            </thead>
+            
+            <tbody id="tabla-datos-body">
+                <tr>
+                    <td id="country_name">-</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 
     <!-- Bootstrap JS y jQuery -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-<script src="js/main.js"> </script>
+    <script src="js/main.js"></script>
 </body>
 </html>
