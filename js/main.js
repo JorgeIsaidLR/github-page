@@ -14,7 +14,6 @@ const solicitudAPI = () => {
             console.log(error);
         });
 };
-};
 
 // llama al evento load cada vez que se actulaiza la pagina
 // llama a la funcion solicitud que tiene la rutina de llamas a la api desde axios
