@@ -50,9 +50,6 @@ axios.get('https://itp-bdd-jilr-01.000webhostapp.com/php-geoip-api/index.php')
    console.log(formData);
    let apiUrl;
   switch (currentCountry) {
-        case 'Mexico':
-            apiUrl = 'https://api-web-service-argentina.alwaysdata.net/';
-            break;
         case 'Argentina':
             apiUrl = 'https://api-web-service-argentina.alwaysdata.net/';
             break;
