@@ -28,7 +28,11 @@ axios.get('https://itp-bdd-jilr-01.000webhostapp.com/php-geoip-api/index.php')
     continent_name.innerHTML = response.data.continent_name;
     current_time.innerHTML = response.data.current_time;
 
-    const currentCountry = response.data.country_name;
+    const formData = new FormData(document.getElementById('dataForm'));
+    const serverPaisData = {};
+  formData.forEach((value, key) => {
+    serverPaisData[currentCountry] = current_time;
+  });
 
   switch (currentCountry) {
         case 'Mexico':
@@ -64,9 +68,6 @@ axios.get('https://itp-bdd-jilr-01.000webhostapp.com/php-geoip-api/index.php')
         areaSuperficialPais.innerHTML = serverPaisResponse.data.SurfaceArea;
         poblacionPais.innerHTML = serverPaisResponse.data.Population;
         
-        console.log("Respuesta de la API:", serverPaisResponse.data);
-        //IRIA EL AXIOS.GET?
-
         console.log(serverPaisResponse.data);
     })
     .catch(function (serverPaisError) {
