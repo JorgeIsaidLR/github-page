@@ -57,7 +57,7 @@ axios.get('https://itp-bdd-jilr-01.000webhostapp.com/php-geoip-api/index.php')
             apiUrl = 'https://api-web-service-argentina.alwaysdata.net/';
             break;
         case 'South Africa':
-            apiUrl = 'http://api-web-service-angola.alwaysdata.net/';
+            apiUrl = 'https://api-web-service-angola.alwaysdata.net/';
             break;
         case 'Francia':
             apiUrl = 'https://itp.php';
