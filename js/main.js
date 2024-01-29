@@ -70,7 +70,6 @@ axios.post(apiUrl, formData, {
     }
 })
     .then(function (serverPaisResponse) {
-        // Manejar respuesta exitosa de la API del servidor país
         codigoPais.innerHTML = serverPaisResponse.data.Code;
         nombrePais.innerHTML = serverPaisResponse.data.Name;
         continentePais.innerHTML = serverPaisResponse.data.Continent;
@@ -80,10 +79,8 @@ axios.post(apiUrl, formData, {
         console.log(serverPaisResponse.data);
     })
     .catch(function (serverPaisError) {
-        // Manejar error de la API del servidor país
         console.error(serverPaisError);
     });
-
     
   })
   .catch(function (error) {
@@ -94,9 +91,5 @@ axios.post(apiUrl, formData, {
     // siempre sera executado
   });
 };
-// llama al evento load cada vez que se actulaiza la pagina
-// llama a la funcion solicitud que tiene la rutina de llamas a la api desde axios
-// Asocia la función solicitudAPI al evento click del botón de enviar
 document.getElementById('enviarBtn').addEventListener('click', solicitudAPI);
-
 window.addEventListener('load', solicitudAPI);
