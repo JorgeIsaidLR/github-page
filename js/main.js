@@ -28,8 +28,20 @@ axios.get('https://itp-bdd-jilr-01.000webhostapp.com/php-geoip-api/index.php')
     continent_name.innerHTML = response.data.continent_name;
     current_time.innerHTML = response.data.current_time;
 
-    const currentCountry = response.data.country_name;
-
+  const currentCountry = response.data.country_name;
+  const name = document.getElementById('name').value;
+  const nickname = document.getElementById('nickname').value;
+  const correoelectronico = document.getElementById('correoelectronico').value;
+  const FechaNacimiento = document.getElementById('FechaNacimiento').value;
+  const age = document.getElementById('age').value;
+  const formData = {
+    name: name,
+    nickname: nickname,
+    correoelectronico: correoelectronico,
+    FechaNacimiento: FechaNacimiento,
+    Age: age
+  };
+   let apiUrl;
   switch (currentCountry) {
         case 'Mexico':
             apiUrl = 'https://itp-bdd-jilr-01.000webhostapp.com/API-BIDIRECTIONAL-SERVIDOR_PAIS.php';
@@ -47,14 +59,10 @@ axios.get('https://itp-bdd-jilr-01.000webhostapp.com/php-geoip-api/index.php')
             console.error('País no reconocido');
             return;
     }
-    //para enviar los datos
-    const serverPaisData = {
-      country_name: currentCountry,
-      //IRIAN LOS DATOS A ENVIAR PARA POST
-    };
+    
 
     //axios listo 
-    axios.get(apiUrl, serverPaisData)
+    axios.get(apiUrl, formData)
     .then(function (serverPaisResponse) {
         // Manejar respuesta exitosa de la API del servidor país
         codigoPais.innerHTML = serverPaisResponse.data.Code;
@@ -64,8 +72,6 @@ axios.get('https://itp-bdd-jilr-01.000webhostapp.com/php-geoip-api/index.php')
         areaSuperficialPais.innerHTML = serverPaisResponse.data.SurfaceArea;
         poblacionPais.innerHTML = serverPaisResponse.data.Population;
         
-        console.log("Respuesta de la API:", serverPaisResponse.data);
-        //IRIA EL AXIOS.GET?
 
         console.log(serverPaisResponse.data);
     })
