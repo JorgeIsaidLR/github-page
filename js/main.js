@@ -38,10 +38,10 @@ axios.get('https://itp-bdd-jilr-01.000webhostapp.com/php-geoip-api/index.php')
             apiUrl = 'https://itp-bdd-jilr-01.000webhostapp.com/API-BIDIRECTIONAL-SERVIDOR_PAIS.php';
             break;
         case 'Angola':
-            apiUrl = 'URLAPI "API2"';
+            apiUrl = 'https://itp.php';
             break;
         case 'Francia':
-            apiUrl = 'URLAPI "API3"';
+            apiUrl = 'https://itp.php';
             break;
         default:
             console.error('País no reconocido');
@@ -54,7 +54,7 @@ axios.get('https://itp-bdd-jilr-01.000webhostapp.com/php-geoip-api/index.php')
     };
 
     //axios listo 
-    axios.post(apiUrl, serverPaisData)
+    axios.get(apiUrl, serverPaisData)
     .then(function (serverPaisResponse) {
         // Manejar respuesta exitosa de la API del servidor país
         codigoPais.innerHTML = serverPaisResponse.data.Code;
