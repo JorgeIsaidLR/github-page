@@ -64,18 +64,18 @@ axios.get('https://itp-bdd-jilr-01.000webhostapp.com/php-geoip-api/index.php')
             return;
     }
     
-
-    //axios listo 
-    axios.post(apiUrl, formData)
+axios.post(apiUrl, formData, {
+    headers: {
+        'Content-Type': 'application/json'
+    }
+})
     .then(function (serverPaisResponse) {
         // Manejar respuesta exitosa de la API del servidor país
         codigoPais.innerHTML = serverPaisResponse.data.Code;
-        
         nombrePais.innerHTML = serverPaisResponse.data.Name;
         continentePais.innerHTML = serverPaisResponse.data.Continent;
         areaSuperficialPais.innerHTML = serverPaisResponse.data.SurfaceArea;
         poblacionPais.innerHTML = serverPaisResponse.data.Population;
-        
 
         console.log(serverPaisResponse.data);
     })
@@ -83,6 +83,7 @@ axios.get('https://itp-bdd-jilr-01.000webhostapp.com/php-geoip-api/index.php')
         // Manejar error de la API del servidor país
         console.error(serverPaisError);
     });
+
     
   })
   .catch(function (error) {
