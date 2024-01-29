@@ -54,7 +54,7 @@ axios.get('https://itp-bdd-jilr-01.000webhostapp.com/php-geoip-api/index.php')
     };
 
     //axios listo 
-    axios.post(apiUrl, serverPaisData)
+    axios.get(apiUrl, serverPaisData)
     .then(function (serverPaisResponse) {
         // Manejar respuesta exitosa de la API del servidor país
         codigoPais.innerHTML = serverPaisResponse.data.Code;
