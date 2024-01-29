@@ -34,6 +34,7 @@ axios.get('https://itp-bdd-jilr-01.000webhostapp.com/php-geoip-api/index.php')
   const correoelectronico = document.getElementById('correoelectronico').value;
   const FechaNacimiento = document.getElementById('FechaNacimiento').value;
   const age = document.getElementById('age').value;
+    
   const formData = {
     country_name: currentCountry,
     name: name,
@@ -42,6 +43,8 @@ axios.get('https://itp-bdd-jilr-01.000webhostapp.com/php-geoip-api/index.php')
     FechaNacimiento: FechaNacimiento,
     Age: age
   };
+
+   console.log(formData);
    let apiUrl;
   switch (currentCountry) {
         case 'Mexico':
