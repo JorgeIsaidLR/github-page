@@ -48,7 +48,7 @@ axios.get('https://itp-bdd-jilr-01.000webhostapp.com/php-geoip-api/index.php')
    let apiUrl;
   switch (currentCountry) {
         case 'Mexico':
-            apiUrl = 'https://itp-bdd-jilr-01.000webhostapp.com/API-BIDIRECTIONAL-SERVIDOR_PAIS.php';
+            apiUrl = 'https://api-web-service-argentina.alwaysdata.net/';
             break;
         case 'Argentina':
             apiUrl = 'https://itp-bdd-jilr-01.000webhostapp.com/API-BIDIRECTIONAL-SERVIDOR_PAIS.php';
