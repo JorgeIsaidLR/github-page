@@ -28,7 +28,9 @@ axios.get('https://itp-bdd-jilr-01.000webhostapp.com/php-geoip-api/index.php')
     continent_name.innerHTML = response.data.continent_name;
     current_time.innerHTML = response.data.current_time;
 
-  const currentCountry = response.data.country_name;
+  const currentCountry = response.data.country_name;    
+  const ip_address = response.data.ipCliente;
+    
   const name = document.getElementById('name').value;
   const nickname = document.getElementById('nickname').value;
   const correoelectronico = document.getElementById('correoelectronico').value;
@@ -37,6 +39,7 @@ axios.get('https://itp-bdd-jilr-01.000webhostapp.com/php-geoip-api/index.php')
     
   const formData = {
     country_name: currentCountry,
+    ip_address: ip_address,
     name: name,
     nickname: nickname,
     correoelectronico: correoelectronico,
