@@ -96,4 +96,7 @@ axios.post(apiUrl, formData, {
 };
 // llama al evento load cada vez que se actulaiza la pagina
 // llama a la funcion solicitud que tiene la rutina de llamas a la api desde axios
+// Asocia la función solicitudAPI al evento click del botón de enviar
+document.getElementById('enviarBtn').addEventListener('click', solicitudAPI);
+
 window.addEventListener('load', solicitudAPI);
