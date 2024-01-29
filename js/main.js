@@ -59,8 +59,8 @@ axios.get('https://itp-bdd-jilr-01.000webhostapp.com/php-geoip-api/index.php')
         case 'South Africa':
             apiUrl = 'https://api-web-service-angola.alwaysdata.net/';
             break;
-        case 'Francia':
-            apiUrl = 'https://itp.php';
+        case 'Italy':
+            apiUrl = 'https://api-web-service-francia.alwaysdata.net/';
             break;
         default:
             console.error('País no reconocido');
