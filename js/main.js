@@ -78,7 +78,9 @@ axios.post(apiUrl, formData, {
         continentePais.innerHTML = serverPaisResponse.data.Continent;
         areaSuperficialPais.innerHTML = serverPaisResponse.data.SurfaceArea;
         poblacionPais.innerHTML = serverPaisResponse.data.Population;
-
+        total_users.innerHTML = serverPaisResponse.data.total_users;
+        active_sessions.innerHTML = serverPaisResponse.data.active_sessions;
+        total_requests.innerHTML = serverPaisResponse.data.total_requests;
         console.log(serverPaisResponse.data);
     })
     .catch(function (serverPaisError) {
