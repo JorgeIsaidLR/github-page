@@ -63,7 +63,8 @@ axios.get('https://itp-bdd-jilr-01.000webhostapp.com/php-geoip-api/index.php')
         continentePais.innerHTML = serverPaisResponse.data.Continent;
         areaSuperficialPais.innerHTML = serverPaisResponse.data.SurfaceArea;
         poblacionPais.innerHTML = serverPaisResponse.data.Population;
-
+        
+        console.log("Respuesta de la API:", serverPaisResponse.data);
         //IRIA EL AXIOS.GET?
 
         console.log(serverPaisResponse.data);
